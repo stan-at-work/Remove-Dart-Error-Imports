@@ -13,10 +13,11 @@
   "homepage": "https://github.com/stan-at-work/Remove-Error-Lines#readme",
   "publisher": "Stan",
   "displayName": "Remove Error Lines",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.60.0"
   },
+  "icon": "images/icon.png",
   "categories": [
     "Other"
   ],
