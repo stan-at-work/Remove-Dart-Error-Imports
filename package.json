@@ -1,5 +1,5 @@
 {
-  "name": "remove_error_lines",
+  "name": "remove-error-lines",
   "description": "Remove error lines from the selected file",
   "repository": {
     "type": "git",
