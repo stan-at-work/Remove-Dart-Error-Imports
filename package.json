@@ -1,5 +1,6 @@
 {
   "name": "remove-error-lines",
+  "publisher": "Stan",
   "displayName": "Remove Error Lines",
   "description": "An extension to remove lines with errors from code",
   "version": "1.0.0",
