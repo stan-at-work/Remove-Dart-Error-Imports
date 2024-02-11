@@ -1,18 +1,8 @@
 {
-  "name": "remove_error_lines",
-  "description": "Remove error lines from the selected file",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stan-at-work/Remove-Error-Lines.git"
-  },
-  "author": "Stan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stan-at-work/Remove-Error-Lines/issues"
-  },
-  "homepage": "https://github.com/stan-at-work/Remove-Error-Lines#readme",
+  "name": "remove-error-lines",
   "publisher": "Stan",
   "displayName": "Remove Error Lines",
+  "description": "An extension to remove lines with errors from code",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.60.0"
