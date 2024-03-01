@@ -28,12 +28,12 @@ function removeLinesWithErrors(document: vscode.TextDocument): string {
         const lineText = document.lineAt(line).text;
         const diagnostics = vscode.languages.getDiagnostics(document.uri);
 
-        const lineHasError = diagnostics.some((diagnostic) => diagnostic.range.start.line === line && diagnostic.severity === vscode.DiagnosticSeverity.Error);
+        const lineHasError = diagnostics.some((diagnostic) => diagnostic.range.start.line === line && diagnostic.severity === vscode.DiagnosticSeverity.Error) && /^(import|part|part of)\s*/.test(lineText.trim());
 
         if (!lineHasError) {
             updatedText += lineText;
 
-            if(line < document.lineCount - 1) {
+            if (line < document.lineCount - 1) {
                 updatedText += '\n';
             }
         }

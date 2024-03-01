@@ -1,56 +1,53 @@
 {
-  "name": "remove-error-lines",
-  "description": "Remove error lines from the selected file",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stan-at-work/Remove-Error-Lines.git"
-  },
-  "author": "Stan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stan-at-work/Remove-Error-Lines/issues"
-  },
-  "homepage": "https://github.com/stan-at-work/Remove-Error-Lines#readme",
-  "publisher": "Stan",
-  "displayName": "Remove Error Lines",
-  "version": "1.0.1",
-  "engines": {
-    "vscode": "^1.60.0"
-  },
-  "icon": "images/icon.png",
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.removeLinesWithErrors"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "extension.removeLinesWithErrors",
-        "title": "Remove Lines With Errors"
-      }
+    "name": "remove-error-lines",
+    "description": "Remove error lines from the selected file",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stan-at-work/Remove-Error-Lines.git"
+    },
+    "author": "Stan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/stan-at-work/Remove-Error-Lines/issues"
+    },
+    "homepage": "https://github.com/stan-at-work/Remove-Error-Lines#readme",
+    "publisher": "Stan",
+    "displayName": "Remove Error Lines",
+    "version": "1.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "icon": "images/icon.png",
+    "categories": [
+        "Other"
     ],
-    "menus": {
-      "editor/context": [
-        {
-          "command": "extension.removeLinesWithErrors",
-          "group": "navigation"
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.removeLinesWithErrors",
+                "title": "Remove Lines With Errors"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.removeLinesWithErrors",
+                    "group": "navigation"
+                }
+            ]
         }
-      ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "typescript": "^4.5.2",
+        "vscode": "^1.1.37"
+    },
+    "dependencies": {
+        "fs": "^0.0.1-security",
+        "path": "^0.12.7"
     }
-  },
-  "scripts": {
-    "vscode:prepublish": "tsc -p ./",
-    "compile": "tsc -watch -p ./"
-  },
-  "devDependencies": {
-    "typescript": "^4.5.2",
-    "vscode": "^1.1.37"
-  },
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
-  }
 }
