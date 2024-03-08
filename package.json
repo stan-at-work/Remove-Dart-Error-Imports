@@ -1,19 +1,19 @@
 {
-    "name": "remove-error-lines",
-    "description": "Remove error lines from the selected file",
+    "name": "remove-dart-error-imports",
+    "description": "Remove dart error imports from the selected file",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/stan-at-work/Remove-Error-Lines.git"
+        "url": "git+https://github.com/stan-at-work/Remove-Dart-Error-Imports.git"
     },
     "author": "Stan",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/stan-at-work/Remove-Error-Lines/issues"
+        "url": "https://github.com/stan-at-work/Remove-Dart-Error-Imports/issues"
     },
-    "homepage": "https://github.com/stan-at-work/Remove-Error-Lines#readme",
+    "homepage": "https://github.com/stan-at-work/Remove-Dart-Error-Imports#readme",
     "publisher": "Stan",
-    "displayName": "Remove Error Lines",
-    "version": "1.0.1",
+    "displayName": "Remove Dart Error Imports",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -22,17 +22,20 @@
         "Other"
     ],
     "main": "./out/extension.js",
+    "activationEvents": [
+        "extension.removeDartImportsWithErrors"
+    ],
     "contributes": {
         "commands": [
             {
-                "command": "extension.removeLinesWithErrors",
-                "title": "Remove Lines With Errors"
+                "command": "extension.removeDartImportsWithErrors",
+                "title": "Remove Error Imports"
             }
         ],
         "menus": {
             "editor/context": [
                 {
-                    "command": "extension.removeLinesWithErrors",
+                    "command": "extension.removeDartImportsWithErrors",
                     "group": "navigation"
                 }
             ]
