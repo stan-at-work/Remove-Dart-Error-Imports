@@ -13,7 +13,7 @@
     "homepage": "https://github.com/stan-at-work/Remove-Dart-Error-Imports#readme",
     "publisher": "Stan",
     "displayName": "Remove Dart Error Imports",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "engines": {
         "vscode": "^1.60.0"
     },

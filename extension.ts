@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-    let disposable = vscode.commands.registerCommand('extension.removeImportsWithErrors', () => {
+    let disposable = vscode.commands.registerCommand('extension.removeDartImportsWithErrors', () => {
         const editor = vscode.window.activeTextEditor;
 
         if (editor) {
             const document = editor.document;
 
-            const updatedText = removeImportsWithErrors(document);
+            const updatedText = removeDartImportsWithErrors(document);
 
             editor.edit((editBuilder) => {
                 const start = new vscode.Position(0, 0);
@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(disposable);
 }
 
-function removeImportsWithErrors(document: vscode.TextDocument): string {
+function removeDartImportsWithErrors(document: vscode.TextDocument): string {
     let updatedText = '';
 
     for (let line = 0; line < document.lineCount; line++) {

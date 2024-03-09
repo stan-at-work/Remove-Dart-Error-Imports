@@ -3,11 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = require("vscode");
 function activate(context) {
-    let disposable = vscode.commands.registerCommand('extension.removeImportsWithErrors', () => {
+    let disposable = vscode.commands.registerCommand('extension.removeDartImportsWithErrors', () => {
         const editor = vscode.window.activeTextEditor;
         if (editor) {
             const document = editor.document;
-            const updatedText = removeImportsWithErrors(document);
+            const updatedText = removeDartImportsWithErrors(document);
             editor.edit((editBuilder) => {
                 const start = new vscode.Position(0, 0);
                 const end = new vscode.Position(document.lineCount + 1, 0);
@@ -19,7 +19,7 @@ function activate(context) {
     context.subscriptions.push(disposable);
 }
 exports.activate = activate;
-function removeImportsWithErrors(document) {
+function removeDartImportsWithErrors(document) {
     let updatedText = '';
     for (let line = 0; line < document.lineCount; line++) {
         const lineText = document.lineAt(line).text;
